@@ -1,0 +1,60 @@
+{
+    "name": "dotcoding-template-nextjs",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "prepare": "husky install"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx,ts,tsx}": [
+            "eslint --fix"
+        ]
+    },
+    "commitlint": {
+        "extends": [
+            "@commitlint/config-conventional"
+        ]
+    },
+    "dependencies": {
+        "@next/font": "13.0.7",
+        "@types/node": "18.11.17",
+        "@types/react": "18.0.26",
+        "@types/react-dom": "18.0.9",
+        "eslint-config-next": "13.0.7",
+        "next": "13.0.7",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-redux": "^8.0.5",
+        "redux": "^4.2.0",
+        "redux-actions": "^2.6.5",
+        "redux-persist": "^6.0.0",
+        "redux-thunk": "^2.4.2",
+        "styled-components": "^5.3.6"
+    },
+    "devDependencies": {
+        "@types/redux-actions": "^2.6.2",
+        "@types/styled-components": "^5.1.26",
+        "@typescript-eslint/eslint-plugin": "^5.47.0",
+        "@typescript-eslint/parser": "^5.47.0",
+        "eslint": "^8.29.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-prettier": "^4.2.1",
+        "eslint-plugin-react": "^7.31.11",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^8.0.2",
+        "prettier": "^2.8.1",
+        "typescript": "^4.9.4"
+    }
+}
