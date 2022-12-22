@@ -1,26 +1,8 @@
-import { useSelector } from 'react-redux';
+// components
+import { Home } from '../components/Home';
 
-// styles
-import * as S from './styles';
-
-// asssets
-import logo from '../assets/images/logo.svg';
-
-// store
-import { RootState } from '../store';
-
-const Home = () => {
-    const user = useSelector((state: RootState) => state.user.user);
-
-    return (
-        <S.Container>
-            <S.Logo src={logo} alt="logo" />
-            <S.TextContainer>
-                <S.Title>{user}</S.Title>
-                <S.Text>Template incial para novos projetos.</S.Text>
-            </S.TextContainer>
-        </S.Container>
-    );
+const HomePage = () => {
+    return <Home />;
 };
 
-export default Home;
+export default HomePage;
