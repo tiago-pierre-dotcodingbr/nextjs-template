@@ -1,7 +1,6 @@
 {
-    "name": "dotcoding-template-nextjs",
-    "version": "0.1.0",
-    "private": true,
+    "name": "dotcoding-nextjs",
+    "version": "1.0.2",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
@@ -9,6 +8,7 @@
         "lint": "next lint",
         "prepare": "husky install"
     },
+    "bin": "./bin/dotcoding-nextjs-template.js",
     "husky": {
         "hooks": {
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
